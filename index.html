@@ -1,0 +1,27 @@
+<!-- index.html für kesweb 
+Author: F.Kesel
+Date: 29.12.2015
+-->
+
+<html lang=de><head>
+	<title>kesweb@BBB</title>
+	<style>
+		h1 {background-color: blue; color: yellow}
+		body {background-color: #FFE6CC}
+	</style>
+</head>
+<body><h1>Willkommen auf Kesels Website!</h1>
+
+<!-- Start Python-script to get the values -->
+<h3><a href="cgi-bin/bmp.py"> Raumtemperatur und Luftdruck</a><br></h3> 
+
+<h3> Webcam (nur mit Passwort)</h3>
+<!-- Open webcam via password form, which is evaluated in Python-script -->
+<form method="post" action="/cgi-bin/webcam.py" target="_blank">
+	Passwort : <input type="password" name="Passwort"/>
+	<button>Webcam starten</button> 
+</form><br>
+  
+<br><img src="images/beagle.png" width="320" height="240" alt="beagle" />
+
+</body></html>
