@@ -7,21 +7,22 @@ Date: 29.12.2015
 	<title>kesweb@BBB</title>
 	<style>
 		h1 {background-color: blue; color: yellow}
-		body {background-color: #FFE6CC}
+		h3 {text-shadow: 5px 5px 5px #aaaaaa}
+		body {background-color: #FFE6CC; text-align: center}
 	</style>
 </head>
 <body><h1>Willkommen auf Kesels Website!</h1>
 
 <!-- Start Python-script to get the values -->
-<h3><a href="cgi-bin/bmp.py"> Raumtemperatur und Luftdruck</a><br></h3> 
+<h3><a href="cgi-bin/bmp_web.py"> Raumtemperatur und Luftdruck</a><br></h3> 
 
 <h3> Webcam (nur mit Passwort)</h3>
 <!-- Open webcam via password form, which is evaluated in Python-script -->
-<form method="post" action="/cgi-bin/webcam.py" target="_blank">
+<form method="post" action="/cgi-bin/webcam.py" target="_self">
 	Passwort : <input type="password" name="Passwort"/>
 	<button>Webcam starten</button> 
 </form><br>
   
 <br><img src="images/beagle.png" width="320" height="240" alt="beagle" />
-
+<br> Website running on BeagleBone Black
 </body></html>
