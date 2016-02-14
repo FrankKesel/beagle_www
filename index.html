@@ -16,11 +16,20 @@ Date: 29.12.2015
 <!-- Start Python-script to get the values -->
 <h3><a href="cgi-bin/bmp_web.py"> Raumtemperatur und Luftdruck</a><br></h3> 
 
-<h3> Webcam (nur mit Passwort)</h3>
+<h3><br> Webcam control</h3>
+<!-- Open webcam via radio button form, which is evaluated in Python-script -->
+<form method="post" action="/cgi-bin/start_webcam.py" target="_self">
+	<input type="radio" name="Webcam" value="an"> Cam an
+	<input type="radio" name="Webcam" value="aus"> Cam aus
+	<input type="radio" name="Webcam" value="reset"> Detektion reset
+	<button>Ausfuehren</button> 
+</form><br>
+
+<h3> Webcam Bilder (nur mit Passwort)</h3>
 <!-- Open webcam via password form, which is evaluated in Python-script -->
-<form method="post" action="/cgi-bin/webcam.py" target="_self">
+<form method="post" action="/cgi-bin/view_webcam.py" target="_self">
 	Passwort : <input type="password" name="Passwort"/>
-	<button>Webcam starten</button> 
+	<button>Aufrufen</button> 
 </form><br>
   
 <br><img src="images/beagle.png" width="320" height="240" alt="beagle" />
